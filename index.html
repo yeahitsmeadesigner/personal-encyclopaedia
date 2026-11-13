@@ -5,13 +5,79 @@
 <meta name="theme-color" content="#f7f7f5"><title>Mahibalan S | Personal Encyclopedia</title>
 <style>
 :root{--bg:#f7f7f5;--paper:#fff;--ink:#202124;--muted:#62666b;--line:#b7bbc0;--link:#2456a6;--soft:#eef0f2}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.72 Arial,sans-serif}a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}header{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding:11px max(16px,calc((100vw - 1200px)/2));display:flex;justify-content:space-between;align-items:center}.brand{font:21px Georgia,serif;color:var(--ink)}button{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:7px 10px;cursor:pointer}.layout{max-width:1200px;margin:auto;padding:26px 22px;display:grid;grid-template-columns:175px minmax(0,1fr);gap:32px}.contents{position:sticky;top:80px;align-self:start;font-size:13px}.contents a{display:block;padding:4px 0}main{min-width:0}.eyebrow{font-size:11px;letter-spacing:.12em;color:var(--muted)}h1{font:normal 35px Georgia,serif;border-bottom:1px solid var(--line);padding-bottom:10px;margin:5px 0}.sub,.muted{color:var(--muted);font-size:13px}.notice{background:#f5f3eb;border:1px solid #c9c1a9;padding:10px 13px;margin:18px 0;font-size:13px}.profile-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,315px);gap:24px;align-items:start;margin:18px 0 26px}.profile-copy{min-width:0}.infobox{width:100%;margin:0;padding:10px;background:var(--paper);border:1px solid var(--line);font-size:13px}.infobox h2{text-align:center;font:700 18px Georgia,serif;margin:3px}.portrait{width:100%;height:auto;max-height:390px;object-fit:cover;object-position:center 24%;display:block;margin:8px auto}.infobox table{width:100%;border-collapse:collapse}.infobox th,.infobox td{border-top:1px solid var(--soft);padding:6px;text-align:left;vertical-align:top}.infobox th{width:35%}.lead{font-size:16px;margin-top:0}.intro-highlights{display:grid;gap:10px;margin-top:20px}.intro-highlight{background:var(--paper);border:1px solid var(--soft);border-left:3px solid #9aa8ba;padding:10px 12px}.intro-highlight strong{display:block;font:700 15px Georgia,serif;margin-bottom:2px}.intro-highlight p{margin:0;font-size:13px;color:var(--muted)}.section{margin:28px 0}.section h2{font:normal 25px Georgia,serif;border-bottom:1px solid var(--line);padding-bottom:6px}.section h3{font:700 18px Georgia,serif;margin:18px 0 4px}.tag{display:inline-block;background:var(--soft);padding:2px 8px;border-radius:3px;margin:2px;font-size:12px}.project{border-left:3px solid #aab1ba;padding-left:14px;margin:17px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.interest{background:var(--paper);border:1px solid var(--soft);padding:12px}.interest h3{margin:0 0 4px}.interest p{margin:0;font-size:14px}.timeline{display:grid;grid-template-columns:130px 1fr;gap:15px;margin:14px 0}.date{font-size:13px;color:var(--muted);font-weight:bold}.mobiletoc{display:none}.footer{text-align:center;border-top:1px solid var(--line);padding:18px;color:var(--muted);font-size:12px}body.dark{--bg:#17191c;--paper:#22262b;--ink:#e8eaed;--muted:#b7bec7;--line:#606a75;--link:#8ab4f8;--soft:#343a40}body.dark .notice{background:#302f29;border-color:#71694f}@media(max-width:800px){.layout{display:block;padding:18px 14px}.contents{display:none}.profile-intro{grid-template-columns:minmax(0,1fr) minmax(220px,280px);gap:16px}.mobiletoc{display:block;background:var(--paper);border:1px solid var(--line);padding:10px 14px}.mobiletoc a{margin-right:8px}}@media(max-width:560px){.profile-intro{grid-template-columns:1fr}.infobox{width:100%;max-width:360px;margin:0 auto}.intro-highlights{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr;gap:2px}h1{font-size:29px}header{padding:10px 13px}}@media print{header,.contents,button{display:none!important}.layout{display:block;padding:0}body{background:white;color:black}}
+
+/* Responsive refinements: keep every section comfortable on phones and tablets. */
+img,video,iframe{max-width:100%}
+body{overflow-x:hidden}
+main,.profile-copy,.section,.project,.interest{min-width:0}
+p,li,td,th{overflow-wrap:anywhere}
+button,a{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.tag{white-space:normal}
+@media(max-width:900px){
+ .layout{grid-template-columns:150px minmax(0,1fr);gap:20px;padding:22px 18px}
+ .contents{font-size:12px}
+}
+@media(max-width:800px){
+ header{padding:10px 16px;gap:10px;flex-wrap:wrap}
+ .layout{display:block;width:100%;padding:18px 16px}
+ .contents{display:none}
+ main{width:100%}
+ .profile-intro{grid-template-columns:minmax(0,1fr) minmax(210px,270px);gap:16px}
+ .mobiletoc{display:flex;align-items:center;gap:12px;overflow-x:auto;white-space:nowrap;max-width:100%;-webkit-overflow-scrolling:touch}
+ .mobiletoc strong{flex:0 0 auto}
+ .mobiletoc a{flex:0 0 auto;margin:0}
+ .section{scroll-margin-top:76px}
+}
+@media(max-width:600px){
+ body{font-size:15px;line-height:1.65}
+ header{position:relative;align-items:flex-start}
+ .brand{font-size:19px}
+ header>div{display:flex;gap:7px;flex-wrap:wrap}
+ button{min-height:40px;padding:8px 10px}
+ .layout{padding:16px 13px}
+ h1{font-size:30px;line-height:1.2}
+ .sub{line-height:1.5}
+ .notice{margin:14px 0;padding:10px 11px}
+ .profile-intro{grid-template-columns:minmax(0,1fr);gap:18px;margin:16px 0 22px}
+ .profile-copy{width:100%}
+ .lead{font-size:16px}
+ .infobox{width:100%;max-width:380px;margin:0 auto}
+ .portrait{max-height:420px;object-fit:contain}
+ .infobox th,.infobox td{padding:7px 5px}
+ .intro-highlights{grid-template-columns:1fr;gap:8px;margin-top:16px}
+ .mobiletoc{padding:10px 11px;gap:10px}
+ .mobiletoc a{font-size:13px}
+ .section{margin:24px 0}
+ .section h2{font-size:23px}
+ .timeline{grid-template-columns:1fr;gap:2px}
+ .date{margin-bottom:0}
+ .grid{grid-template-columns:1fr}
+ .project{padding-left:11px;margin:15px 0}
+ .tag{font-size:12px;margin:3px 2px}
+ .footer{padding:16px 12px}
+}
+@media(max-width:380px){
+ .layout{padding:14px 10px}
+ header{padding:9px 10px}
+ .brand{font-size:17px}
+ header>div{width:100%}
+ header button{font-size:12px}
+ h1{font-size:27px}
+ .mobiletoc{gap:8px}
+ .infobox{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
 </style></head><body id="top">
 <header><a class="brand" href="#top">Personal Encyclopedia</a><div><button id="theme">◐ Appearance</button> <button onclick="window.print()">Print / Save PDF</button></div></header>
 <div class="layout"><aside class="contents"><strong>Contents</strong><a href="#overview">1. Overview</a><a href="#education">2. Education</a><a href="#career">3. Career</a><a href="#skills">4. Skills</a><a href="#hobbies">5. Hobbies</a><a href="#projects">6. Projects</a><a href="#goals">7. Goals</a><a href="#links">8. Links</a></aside>
 <main><div class="eyebrow">PERSONAL PROFILE · TECHNOLOGY · DESIGN</div><h1>Mahibalan S</h1><p class="sub">A little about my background, the things I enjoy and what I’m building next</p>
 <div class="notice"><strong>A note about this page:</strong> This is my personal profile in an encyclopedia-inspired format. It reflects the details and projects I’ve shared, and I’ll keep it updated as I learn and grow.</div>
 <div class="profile-intro"><div class="profile-copy">
-<p class="lead">I’m Mahibalan, a computer science graduate with both technical and creative interests. I enjoy learning how things work, trying out new tools and turning ideas into something useful. My interests include Python development, artificial intelligence, automation, IT support and graphic design. I’m still early in my journey, and I see every project as a chance to learn something new.</p>
+<p class="lead">Hey, I’m Mahibalan! I’m a Computer Science graduate who enjoys exploring technology and creating things. I like trying out new tools, building small projects and figuring out how things work.</p><p>I’m interested in Python, AI, automation, IT support and graphic design. I enjoy both the technical and creative sides of technology, and I’m always looking for something new to learn or build.</p><p>I’m still growing, experimenting and figuring out my path — one project at a time. 🚀</p>
 <div class="intro-highlights"><article class="intro-highlight"><strong>Build and experiment</strong><p>I like turning ideas into small apps, bots and practical automation projects.</p></article><article class="intro-highlight"><strong>Design and create</strong><p>I enjoy visual design, exploring layouts and making information easier to understand.</p></article><article class="intro-highlight"><strong>Learn by doing</strong><p>From Linux labs to AI tools, I learn best by testing, troubleshooting and improving.</p></article></div>
 </div><aside class="infobox"><h2>Mahibalan S</h2><img class="portrait" src="./portrait.jpg" alt="Illustrated portrait of Mahibalan wearing sunglasses"><table><tr><th>Born</th><td>15 May 2005</td></tr><tr><th>Education</th><td>B.E., Computer Science</td></tr><tr><th>Graduated</th><td>2026</td></tr><tr><th>Based in</th><td>Tamil Nadu, India</td></tr><tr><th>Interests</th><td>AI, software, automation and design</td></tr><tr><th>GitHub</th><td><a href="https://github.com/yeahitsmeadesigner" target="_blank" rel="noopener">yeahitsmeadesigner</a></td></tr></table></aside></div>
 <nav class="mobiletoc"><strong>On this page:</strong> <a href="#overview">Overview</a><a href="#education">Education</a><a href="#career">Career</a><a href="#skills">Skills</a><a href="#hobbies">Hobbies</a><a href="#projects">Projects</a><a href="#goals">Goals</a></nav>
