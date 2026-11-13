@@ -1,26 +1,21 @@
-# Mahibalan S — Personal Encyclopedia
+# 📖 Mahibalan S — Personal Encyclopedia
 
-A responsive, Wikipedia-inspired personal profile built with plain HTML, CSS and JavaScript.
+> A sleek, responsive, Wikipedia-inspired personal profile built with zero dependencies using vanilla HTML, CSS, and JavaScript.
 
-## Project files
-- `index.html` — complete website, styling and interactions
-- `portrait.jpg` — profile image
+---
 
-## Run locally
-Clone or download this repository and open `index.html` in a modern browser. No build step or dependencies are required.
+## ✨ Features
 
-## Publish with GitHub Pages
-1. Open **Settings → Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Choose branch `main` and folder `/ (root)`, then save.
-4. Wait for deployment to finish. GitHub will show the published URL in Pages settings.
+- **Encyclopedia-Style Layout** — Clean typography, structured infoboxes, and smooth contents navigation.
+- **Responsive Design** — Optimized for seamless viewing across desktop, tablet, and mobile screens.
+- **Comprehensive Sections** — Dedicated space for biography, education, career, technical skills, hobbies, and projects.
+- **Dark Mode Support** — Built-in appearance toggle for comfortable reading in any lighting.
+- **Print & PDF Ready** — Custom print stylesheets for effortless saving as a PDF or physical copy.
 
-## Included features
-- Responsive desktop and mobile layout
-- Encyclopedia-inspired profile and contents navigation
-- Biography, education, career, skills, hobbies and projects
-- Dark appearance toggle
-- Print / Save as PDF support
+---
 
-## Personal information
-The biography is based on information shared by Mahibalan. Review personal details, especially the date of birth, before sharing the page publicly.
+## 📁 Project Structure
+
+```text
+├── index.html      # Complete markup, styling, and interactive logic
+└── portrait.jpg    # Profile portrait
